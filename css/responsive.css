@@ -1,0 +1,149 @@
+/* Responsive styles for the quiz app */
+
+/* Base styles (mobile first) */
+.container {
+  padding: var(--space-md);
+  width: 100%;
+}
+
+#welcome-screen h1 {
+  font-size: 36px;
+}
+
+.tagline {
+  font-size: var(--font-size-md);
+}
+
+.btn {
+  width: 100%;
+}
+
+.options-container {
+  gap: var(--space-sm);
+}
+
+.option {
+  padding: var(--space-md);
+}
+
+.results-stats {
+  grid-template-columns: 1fr;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+}
+
+#final-score {
+  font-size: 36px;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: var(--space-lg);
+  }
+  
+  #welcome-screen h1 {
+    font-size: 42px;
+  }
+  
+  .tagline {
+    font-size: var(--font-size-lg);
+  }
+  
+  .btn {
+    width: auto;
+    min-width: 180px;
+  }
+  
+  .options-container {
+    gap: var(--space-md);
+  }
+  
+  .option {
+    padding: var(--space-lg);
+  }
+  
+  .results-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .score-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  #final-score {
+    font-size: 48px;
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #welcome-screen h1 {
+    font-size: 48px;
+  }
+  
+  .tagline {
+    font-size: var(--font-size-xl);
+  }
+  
+  .option:hover {
+    transform: translateY(-2px);
+  }
+  
+  .score-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  #final-score {
+    font-size: 56px;
+  }
+}
+
+/* Large desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* Handle smaller height screens */
+@media (max-height: 600px) {
+  .container {
+    padding: var(--space-sm);
+  }
+  
+  h1 {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .tagline {
+    margin-bottom: var(--space-md);
+  }
+  
+  .question-container {
+    margin-bottom: var(--space-md);
+  }
+  
+  #question-text {
+    margin-bottom: var(--space-md);
+  }
+  
+  .options-container {
+    gap: var(--space-xs);
+  }
+  
+  .option {
+    padding: var(--space-sm);
+  }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/brain.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Welcome screen -->
+      <div id="welcome-screen" class="screen active">
+        <div class="container">
+          <h1>QuizMaster</h1>
+          <p class="tagline">Test your knowledge with our interactive quiz!</p>
+          <button id="start-quiz-btn" class="btn btn-primary">Start Quiz</button>
+        </div>
+      </div>
+
+      <!-- Quiz screen -->
+      <div id="quiz-screen" class="screen">
+        <div class="container">
+          <div class="quiz-header">
+            <div class="progress-container">
+              <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div class="quiz-info">
+              <span id="question-counter">Question 1/10</span>
+              <span id="timer">30</span>
+            </div>
+          </div>
+          
+          <div id="question-container" class="question-container">
+            <h2 id="question-text">Question goes here?</h2>
+            <div id="options-container" class="options-container">
+              <!-- Options will be inserted here by JavaScript -->
+            </div>
+          </div>
+
+          <div class="quiz-footer">
+            <button id="next-btn" class="btn btn-primary" disabled>Next Question</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results screen -->
+      <div id="results-screen" class="screen">
+        <div class="container">
+          <h1>Quiz Results</h1>
+          <div id="results-container" class="results-container">
+            <div class="score-display">
+              <div class="score-circle">
+                <span id="final-score">0</span>
+                <span class="score-divider">/</span>
+                <span id="total-questions">10</span>
+              </div>
+              <p id="score-message">Better luck next time!</p>
+            </div>
+            <div class="results-stats">
+              <div class="stat">
+                <span class="stat-label">Correct Answers</span>
+                <span id="correct-answers" class="stat-value">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Incorrect Answers</span>
+                <span id="incorrect-answers" class="stat-value">0</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Time Taken</span>
+                <span id="time-taken" class="stat-value">0:00</span>
+              </div>
+            </div>
+            <div id="review-container" class="review-container">
+              <!-- Question review will be inserted here -->
+            </div>
+          </div>
+          <div class="results-actions">
+            <button id="restart-btn" class="btn btn-primary">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
