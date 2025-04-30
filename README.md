@@ -54,15 +54,18 @@ npm run dev
 ```
 quizmaster/
 ├── css/
-│   ├── main.css
-│   ├── animations.css
-│   └── responsive.css
+│   ├── main.css          # Core styles and variables
+│   ├── animations.css    # Animation keyframes and classes
+│   └── responsive.css    # Media queries and responsive styles
 ├── js/
-│   ├── quiz.js
-│   └── ui.js
+│   ├── quiz.js           # Quiz logic and state management
+│   └── ui.js             # UI updates and DOM manipulation
 ├── data/
-│   └── questions.js
-└── index.html
+│   └── questions.js      # Quiz questions data
+├── index.html            # Main HTML file
+├── main.js               # Application entry point
+├── style.css             # Global styles
+└── counter.js            # Counter functionality
 ```
 
 ## 🎮 How to Play
